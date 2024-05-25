@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            background-color: #e5e2e9;
+            font-family: Arial, sans-serif;
+        }
+        .header-container {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            background-color: #e5e2e9;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .header {
+            width: 70%;
+            padding: 40px 0;
+            font-size: 36px;
+            position: relative;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .left-header {
+            display: flex;
+            align-items: center;
+        }
+        .profile-container {
+            display: flex;
+            align-items: center;
+        }
+        .profile-upload {
+            width: 50px;
+            height: 50px;
+            overflow: hidden;
+            border-radius: 50%;
+            border: 1px solid orange;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            cursor: pointer;
+            position: relative;
+        }
+        .profile-upload input[type="file"] {
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            cursor: pointer;
+        }
+        .user-name {
+            margin-left: 10px;
+            margin-right: 10px;
+            font-size: 18px;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .main-content {
+            display: flex;
+        }
+        .sidebar {
+            width: 20%;
+            background-color: blue;
+            height: calc(100vh - 83px);
+            padding-top: 20px;
+            box-sizing: border-box;
+            position: sticky;
+            top: 0;
+        }
+        .sidebar button {
+            background-color: blue;
+            color: rgb(233, 239, 241);
+            border: none;
+            width: 100%;
+            padding: 15px;
+            text-align: left;
+            cursor: pointer;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        .sidebar button:hover {
+            background-color: orange;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+        }
+        .dashboard-top {
+            width: 70%;
+            background-color: blue;
+            padding: 60px;
+            box-sizing: border-box;
+            margin: 20px auto 0;
+            color: white;
+            text-align: center;
+        }
+        .search-bar {
+            width: 50%;
+            padding: 10px;
+            margin: 20px 0;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .img-button-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        .img-button-container button {
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        .img-button-container img {
+            width: 1cm;
+            height: 1cm;
+        }
+        .logo {
+            height: 50px;
+        }
+        .line {
+            width: 1cm;
+            height: 2px;
+            background-color: black;
+            margin-left: 10px;
+        }
+        .header-title {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+<body>
+    <!-----------------------------------Header-------------------------->
+    <div class="header-container">
+        <div class="header">
+            <div class="left-header">
+                <img src="canva.png" alt="Logo" class="logo">
+                <div class="line"></div>
+            </div>
+            <h2 class="header-title">--Welcome--</h2>
+            <div class="profile-container">
+                <div class="profile-upload">
+                    <input type="file" id="profileImage" name="profileImage">
+                </div>
+                <div class="user-name">name</div>
+                <div class="dropdown">
+                    <span><button><img src=""></button></span>
+                    <div class="dropdown-content">
+                        <a href="#">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="main-content">
+        <!----------------------------------------Side Bar---------------------------->
+        <div class="sidebar">
+            <button>Dashboard</button>
+            <button>Products</button>
+            <button>Category</button>
+            <button>Notification</button>
+            <button>User Setting</button>
+            <button>Appearance</button>
+            <button>Admin Manage</button>
+        </div>
+        <!------------------------------------Body Part-------------------------------------------------->
+        <div class="container">
+            <div class="dashboard-top">
+                <input type="text" class="search-bar" placeholder="search">
+                <div class="img-button-container">
+                    <button><img src="docs.png" alt="Docs"></button>
+                    <button><img src="for you.png" alt="For You"></button>
+                    <button><img src="website.png" alt="Website"></button>
+                </div>
+            </div>
+
+            <div>
+                <button><img src="DOCS2.png"></button>
+                <button><img src="whiteboard2.png"></button>
+                <button><img src="logo.png"></button>
+                <button><img src="poster.png"></button>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
